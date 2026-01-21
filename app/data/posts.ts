@@ -22,7 +22,7 @@ export const posts: Post[] = [
   {
     id: "devlog01-aloy-introducao-ao-projeto-aloy",
     title: "DevLog #01 – Aloy: Introdução ao projeto Aloy",
-    category: "Tech",
+    category: "DevLog",
     description: "DevLog #01 da Aloy – uma assistente pessoal local, privada e modular. Neste post explico por que decidi criar minha própria IA, o que já está funcionando, e como pretendo abrir o projeto como open source futuramente.",
     coverImage: "./coverimg-01.jpg",
  content: `<h2 id="devlog-01-aloy-introdu-o-ao-projeto-aloy">DevLog #01 – Aloy: Introdução ao projeto Aloy</h2>
