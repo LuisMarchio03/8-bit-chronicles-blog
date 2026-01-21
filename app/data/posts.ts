@@ -7,6 +7,7 @@ export type Post = {
   content: string;
 };
 
+
 export const posts: Post[] = [
   {
     id: "microservices-scalability-operational-costs-cloud-native",
