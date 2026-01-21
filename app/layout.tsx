@@ -42,7 +42,7 @@ export default function RootLayout({
             <ColorfulPixelLogo />
             <h1 className="text-4xl font-bold text-center font-pixel mb-2">8-Bit Chronicles</h1>
             <p className="text-xl text-center font-mono flex items-center">
-              Games • Tech <BlinkingCursor />
+              Games • Tech • DevLog <BlinkingCursor />
             </p>
             <NavMenu />
           </header>
