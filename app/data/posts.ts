@@ -103,5 +103,287 @@ Esse DevLog é escrito de Dev (e um toque de IA para agilizar a vida ksks) para 
 <p>Obrigado por ler até aqui,</p>
 <p>Ass. LuisMarchio03f</p>`
   }
-]
+],
+  {
+    id: "devlog01-pipeline-observability-jan-2026",
+    title: "DevLog #01 – Order Pipeline: Arquitetura Event-Driven Serverless",
+    category: "DevLog",
+    description: "Iniciando o DEVLOG sobre observabilidade e resiliência em arquiteturas event-driven serverless com C#/.NET. Discutindo a estrutura geral do projeto Order Pipeline.",
+    coverImage: "./coverimg-order-pipeline-01.jpg",
+    content: `<h2>DevLog #01 – Order Pipeline: Arquitetura Event-Driven Serverless</h2>
+<p>📅 Data: 06 de Janeiro de 2026</p>
+<p>✍️ Autor: Luís Gabriel Marchió Batista</p>
+<hr>
+<h3>Introdução</h3>
+<p>Após criar o repositório completo para o projeto <strong>Order Pipeline</strong>, estou iniciando um DEVLOG detalhado sobre <strong>observabilidade e resiliência em arquiteturas event-driven serverless com C#/.NET</strong>.</p>
+<p>Neste primeiro post, vamos explorar:</p>
+<ul>
+<li>🏗️ Visão geral da arquitetura event-driven</li>
+<li>☁️ Por que serverless é a escolha ideal</li>
+<li>📊 Fundamentos de observabilidade</li>
+<li>🛡️ Estratégias de resiliência</li>
+</ul>
+<h3>A Arquitetura Event-Driven</h3>
+<p>Uma arquitetura event-driven é baseada em <strong>eventos</strong> como a unidade fundamental de comunicação entre componentes.</p>
+<p>No contexto do Order Pipeline:</p>
+<ul>
+<li><strong>OrderCreated</strong> – Disparado quando um novo pedido é criado</li>
+<li><strong>OrderProcessed</strong> – Disparado quando o pedido entra em processamento</li>
+<li><strong>OrderShipped</strong> – Disparado quando o pedido é enviado</li>
+<li><strong>OrderCancelled</strong> – Disparado quando um pedido é cancelado</li>
+</ul>
+<p>Cada evento flui através de um <strong>message broker</strong> (como RabbitMQ ou Azure Service Bus), permitindo desacoplamento entre os serviços.</p>
+<h3>Serverless e Cloud-Native</h3>
+<p>No contexto de C#/.NET, utilizamos <strong>Azure Functions</strong> ou <strong>AWS Lambda</strong> para executar nossas lógicas de negócio em resposta a eventos.</p>
+<p>Benefícios:</p>
+<ul>
+<li>✅ Escalabilidade automática</li>
+<li>✅ Pagamento apenas pelo uso (pay-per-execution)</li>
+<li>✅ Gerenciamento automático de infraestrutura</li>
+<li>✅ Integração nativa com serviços cloud</li>
+</ul>
+<h3>O que esperar nos próximos posts</h3>
+<p>Continuaremos explorando implementações práticas de observabilidade e resiliência no Order Pipeline. Fique ligado! 🚀</p>`
+  },
+  {
+    id: "devlog02-pipeline-observability-instrumentation",
+    title: "DevLog #02 – Instrumentando Observabilidade: Traces, Logs e Métricas",
+    category: "DevLog",
+    description: "Explorando as três pilares da observabilidade: traces distribuídos, logs estruturados e métricas. Implementação prática com Application Insights e Jaeger.",
+    coverImage: "./coverimg-order-pipeline-02.jpg",
+    content: `<h2>DevLog #02 – Instrumentando Observabilidade: Traces, Logs e Métricas</h2>
+<p>📅 Data: 13 de Janeiro de 2026</p>
+<p>✍️ Autor: Luís Gabriel Marchió Batista</p>
+<hr>
+<h3>Os Três Pilares da Observabilidade</h3>
+<p>Observabilidade é mais do que monitoramento. Está baseada em <strong>três pilares fundamentais</strong>:</p>
+<ol>
+<li><strong>Traces Distribuídos</strong> - Rastreiam uma requisição através de todos os serviços</li>
+<li><strong>Logs Estruturados</strong> - Fornecem contexto detalhado dos eventos</li>
+<li><strong>Métricas</strong> - Agregam dados quantitativos sobre o sistema</li>
+</ol>
+<h3>1. Traces Distribuídos com Jaeger</h3>
+<p>Implementaremos traces distribuídos usando <strong>Jaeger</strong> integrado ao .NET via OpenTelemetry.</p>
+<pre><code class="language-csharp">
+// Configuração do TracerProvider
+var tracerProvider = new TracerProviderBuilder()
+    .AddAspNetCoreInstrumentation()
+    .AddHttpClientInstrumentation()
+    .AddOtlpExporter(opt =&gt; {
+        opt.Endpoint = new Uri("http://jaeger:4317");
+    })
+    .Build();
+</code></pre>
+<h3>2. Logs Estruturados com Serilog</h3>
+<p>Utilizaremos <strong>Serilog</strong> para estruturar os logs com contexto importante.</p>
+<pre><code class="language-csharp">
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console(new RenderedCompactJsonFormatter())
+    .WriteTo.ApplicationInsights(new TelemetryClient(), TelemetryConverter.Events)
+    .CreateLogger();
+</code></pre>
+<h3>3. Métricas com Prometheus</h3>
+<p>Coletaremos métricas usando <strong>OpenTelemetry Metrics API</strong> e exportando para Prometheus.</p>
+<pre><code class="language-csharp">
+var meter = new Meter("OrderPipeline.Metrics");
+var orderCounter = meter.CreateCounter&lt;long&gt;(
+    "orders.created",
+    unit: "{order}",
+    description: "Número de pedidos criados"
+);
+</code></pre>
+<h3>Beneficiando-se da Observabilidade</h3>
+<p>Com esses três pilares implementados, conseguimos:</p>
+<ul>
+<li>🔍 Investigar laços de desempenho em produção</li>
+<li>📄 Entender o contexto completo de cada erro</li>
+<li>📈 Monitorar tendências de desempenho ao longo do tempo</li>
+<li>🚨 Alertar sobre anomalias rapidamente</li>
+</ul>
+<h3>Próximos Passos</h3>
+<p>No próximo post, exploraremos padrões de <strong>resiliência</strong> como Retry e Circuit Breaker.</p>`
+  },
+  {
+    id: "devlog03-pipeline-resilience-patterns",
+    title: "DevLog #03 – Padrões de Resiliência: Retry, Circuit Breaker e Bulkhead",
+    category: "DevLog",
+    description: "Implementando padrões avançados de resiliência no Order Pipeline. Exploramos Retry com exponential backoff, Circuit Breaker patterns e Bulkhead isolation.",
+    coverImage: "./coverimg-order-pipeline-03.jpg",
+    content: `<h2>DevLog #03 – Padrões de Resiliência: Retry, Circuit Breaker e Bulkhead</h2>
+<p>📅 Data: 20 de Janeiro de 2026</p>
+<p>✍️ Autor: Luís Gabriel Marchió Batista</p>
+<hr>
+<h3>Por que Resiliência é Crítica</h3>
+<p>Em uma arquitetura serverless event-driven, falhas são inevitáveis. A chave é <strong>recuperar-se rapidamente</strong>.</p>
+<h3>1. Retry com Exponential Backoff</h3>
+<p>Não tentamos novamente imediatamente. Usamos <strong>exponential backoff</strong>:</p>
+<pre><code class="language-csharp">
+public async Task&lt;T&gt; ExecuteWithRetryAsync&lt;T&gt;(
+    Func&lt;Task&lt;T&gt;&gt; operation,
+    int maxAttempts = 3)
+{
+    for (int attempt = 0; attempt &lt; maxAttempts; attempt++)
+    {
+        try
+        {
+            return await operation();
+        }
+        catch (Exception ex) when (attempt &lt; maxAttempts - 1)
+        {
+            var delay = TimeSpan.FromMilliseconds(Math.Pow(2, attempt) * 100);
+            await Task.Delay(delay);
+        }
+    }
+}
+</code></pre>
+<h3>2. Circuit Breaker Pattern</h3>
+<p>Evitamos cascata de falhas parando de chamar um serviço que está falhando.</p>
+<pre><code class="language-csharp">
+var circuitPolicy = Policy
+    .Handle&lt;HttpRequestException&gt;()
+    .OrResult&lt;HttpResponseMessage&gt;(r =&gt; !r.IsSuccessStatusCode)
+    .CircuitBreakerAsync&lt;HttpResponseMessage&gt;(
+        handledEventsAllowedBeforeBreaking: 5,
+        durationOfBreak: TimeSpan.FromSeconds(30),
+        onBreak: (outcome, timespan) =&gt;
+        {
+            _logger.LogWarning($"Circuit breaker aberto por {timespan.TotalSeconds}s");
+        }
+    );
+</code></pre>
+<h3>3. Bulkhead Isolation</h3>
+<p>Isolamos recursos para que uma falha não afete todo o sistema.</p>
+<pre><code class="language-csharp">
+var bulkheadPolicy = Policy.BulkheadAsync(
+    maxParallelization: 10,
+    maxQueuingActions: 5,
+    onBulkheadRejectionAsync: context =&gt;
+    {
+        _logger.LogWarning("Bulkhead rejeitou requisição");
+        return Task.CompletedTask;
+    }
+);
+</code></pre>
+<h3>Combinando Padrões</h3>
+<p>Combinamos esses padrões em uma <strong>Polly Policy</strong> única:</p>
+<pre><code class="language-csharp">
+var policyWrap = Policy.WrapAsync(
+    retryPolicy,
+    circuitBreakerPolicy,
+    bulkheadPolicy
+);
+</code></pre>
+<h3>Conclusão</h3>
+<p>Com esses padrões, nosso Order Pipeline pode se recuperar de falhas <strong>automaticamente</strong> e evitar cascatas de erro.</p>`
+  },
+  {
+    id: "devlog04-pipeline-testing-validation",
+    title: "DevLog #04 – Testing e Validação: Garantindo Confiabilidade",
+    category: "DevLog",
+    description: "Finalizando o DEVLOG com estratégias de testes end-to-end, unit tests, integration tests e chaos engineering para garantir a confiabilidade do Order Pipeline.",
+    coverImage: "./coverimg-order-pipeline-04.jpg",
+    content: `<h2>DevLog #04 – Testing e Validação: Garantindo Confiabilidade</h2>
+<p>📅 Data: 27 de Janeiro de 2026</p>
+<p>✍️ Autor: Luís Gabriel Marchió Batista</p>
+<hr>
+<h3>Uma Arquitetura Robusta Precisa de Testes Robustos</h3>
+<p>Observabilidade e resiliência são fundamentais, mas precisamos <strong>validar que tudo funciona</strong> antes de ir para produção.</p>
+<h3>1. Unit Tests para Lógica de Negócio</h3>
+<p>Testamos cada componente isoladamente com xUnit:</p>
+<pre><code class="language-csharp">
+[Fact]
+public async Task ProcessOrder_WithValidPayload_ShouldCreateEvent()
+{
+    // Arrange
+    var handler = new OrderProcessingHandler(_logger, _mediator);
+    var command = new ProcessOrderCommand { OrderId = 123, Amount = 100 };
+
+    // Act
+    await handler.Handle(command, CancellationToken.None);
+
+    // Assert
+    _mediator.Verify(m =&gt; m.Publish(
+        It.IsAny&lt;OrderCreatedEvent&gt;(), 
+        It.IsAny&lt;CancellationToken&gt;()),
+        Times.Once);
+}
+</code></pre>
+<h3>2. Integration Tests com Testcontainers</h3>
+<p>Testamos com infraestrutura real (RabbitMQ, databases) usando Testcontainers:</p>
+<pre><code class="language-csharp">
+public class OrderPipelineIntegrationTests : IAsyncLifetime
+{
+    private readonly RabbitMQContainer _container = 
+        new RabbitMQBuilder().WithImage("rabbitmq:3-management").Build();
+
+    public async Task InitializeAsync() =&gt; await _container.StartAsync();
+    public async Task DisposeAsync() =&gt; await _container.StopAsync();
+
+    [Fact]
+    public async Task OrderEvent_PublishedToQueue_ShouldBeConsumed()
+    {
+        // Arrange
+        var connection = new ConnectionFactory { Uri = _container.GetConnectionString() };
+        
+        // ... test implementation
+    }
+}
+</code></pre>
+<h3>3. Chaos Engineering com Gremlin</h3>
+<p>Simulamos falhas em produção de forma controlada:</p>
+<pre><code class="language-csharp">
+// Simular latência aleatória
+var chaosPolicy = Policy
+    .Handle&lt;HttpRequestException&gt;()
+    .Or&lt;TimeoutException&gt;()
+    .InjectLatencyAsync(
+        delay: TimeSpan.FromSeconds(5),
+        injectionRate: 0.1, // 10% das requisições
+        enabled: () =&gt; _isLoadTest);
+</code></pre>
+<h3>4. Load Testing com k6</h3>
+<p>Testamos sob carga para identificar gargalos:</p>
+<pre><code class="language-javascript">
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+export let options = {
+  vus: 100,
+  duration: '5m',
+  thresholds: {
+    http_req_duration: ['p(95)&lt;500'],
+    http_req_failed: ['rate&lt;0.1'],
+  },
+};
+
+export default function() {
+  let response = http.post('http://order-pipeline/api/orders', {
+    productId: 123,
+    quantity: 5,
+  });
+  check(response, {
+    'status is 201': (r) =&gt; r.status === 201,
+  });
+  sleep(1);
+}
+</code></pre>
+<h3>Resultados: Um Sistema de Confiança</h3>
+<p>Com esses testes em lugar, temos:</p>
+<ul>
+<li>✅ Confiabilidade verificada em cada commit</li>
+<li>✅ Comportamento sob carga documentado</li>
+<li>✅ Recuperação de falhas testada</li>
+<li>✅ Regressões evitadas automaticamente</li>
+</ul>
+<h3>Conclusão</h3>
+<p>Construímos um <strong>Order Pipeline robusto, observável e resiliente</strong>. Este DEVLOG explorou:</p>
+<ol>
+<li>🏗️ Arquitetura Event-Driven Serverless</li>
+<li>📈 Observabilidade com Traces, Logs e Métricas</li>
+<li>🛡️ Padrões de Resiliência</li>
+<li>🪨 Testing e Validação</li>
+</ol>
+<p><strong>Próximos passos?</strong> Deploy em produção com confiança! 🚀</p>`
+  }
 
