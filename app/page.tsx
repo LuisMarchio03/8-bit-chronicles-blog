@@ -2,7 +2,7 @@ import Link from "next/link"
 import { posts } from "./data/posts"
 
 export default function Home() {
-  const categories = ["Games", "Tech"]
+  const categories = ["Games", "Tech", "DevLog"]
 
   return (
     <div>
