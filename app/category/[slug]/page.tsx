@@ -11,7 +11,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="h-screen">
+    <div className="h-[100%]">
       <h2 className="text-2xl font-pixel mb-6">{category} Posts</h2>
       <div className="grid gap-6 md:grid-cols-2">
         {categoryPosts.map((post) => (
