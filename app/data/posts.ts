@@ -51,7 +51,7 @@ export const posts: Post[] = [
   </blockquote>
 </div>
     `
-  }
+  },
   {
     id: "devlog01-aloy-introducao-ao-projeto-aloy",
     title: "DevLog #01 – Aloy: Introdução ao projeto Aloy",
