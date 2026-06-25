@@ -28,3 +28,31 @@ body {
   box-shadow: 0 0 0 2px #a78bfa, 0 0 0 4px #000, 0 0 0 6px #a78bfa;
 }
 
+/* Code blocks (highlight.js) tuned to the retro purple theme */
+.post-content pre {
+  background: #14111f;
+  border: 2px solid #4c1d95;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+.post-content pre code.hljs {
+  background: transparent;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+/* Inline code (not inside a pre) */
+.post-content :not(pre) > code {
+  background: #2d1b4e;
+  color: #d8b4fe;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.95em;
+}
+/* Anchor offset so headings aren't hidden under nothing/scroll */
+.post-content :is(h2, h3) {
+  scroll-margin-top: 1.5rem;
+}
+

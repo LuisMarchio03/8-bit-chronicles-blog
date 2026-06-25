@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://8-bit.luismarchio.com.br
+Host: https://8-bit-chronicles-blog.vercel.app
 
 # Sitemaps
-Sitemap: https://8-bit.luismarchio.com.br/sitemap.xml
+Sitemap: https://8-bit-chronicles-blog.vercel.app/sitemap.xml

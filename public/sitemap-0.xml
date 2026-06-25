@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://8-bit-chronicles-blog.vercel.app/post/clair-obscur-expedition-33-review-sem-spoilers</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app/post/devlog01-aloy-introducao-ao-projeto-aloy</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app/post/devlog01-pipeline-observability-jan-2026</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app/post/devlog02-pipeline-observability-instrumentation</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app/post/devlog03-pipeline-resilience-patterns</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app/post/devlog04-pipeline-testing-validation</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app/post/microservices-scalability-operational-costs-cloud-native</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app/category/devlog</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app/category/games</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app/category/tech</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://8-bit-chronicles-blog.vercel.app</loc><lastmod>2026-06-25T10:40:57.006Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

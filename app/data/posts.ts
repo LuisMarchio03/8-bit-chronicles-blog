@@ -4,6 +4,7 @@ export type Post = {
   category: string;
   description: string;
   coverImage: string;
+  date: string;
   content: string;
 };
 
@@ -11,6 +12,7 @@ export type Post = {
 export const posts: Post[] = [
   {
     id: "microservices-scalability-operational-costs-cloud-native",
+    date: "27 Mar 2025",
     title: "IMPACTO DOS MICROSSERVIÇOS NA ESCALABILIDADE E NO CUSTO OPERACIONAL EM AMBIENTES CLOUD-NATIVE",
     category: "Tech",
     description: "Descubra como microsserviços impactam a escalabilidade e reduzem custos operacionais em ambientes cloud-native. Casos reais, estratégias e soluções para otimização na nuvem.",
@@ -21,6 +23,7 @@ export const posts: Post[] = [
   },
   {
     id: "clair-obscur-expedition-33-review-sem-spoilers",
+    date: "2026",
     title: "CLAIR OBSCUR: EXPEDITION 33 - POR QUE JOGAR AGORA (SEM SPOILERS)",
     category: "Games",
     description: "RPG por turnos revolucionário que combina combate em tempo real com narrativa existencial. Análise técnica completa, recepção crítica e atualizações recentes de 2026.",
@@ -54,6 +57,7 @@ export const posts: Post[] = [
   },
   {
     id: "devlog01-aloy-introducao-ao-projeto-aloy",
+    date: "23 Abr 2025",
     title: "DevLog #01 – Aloy: Introdução ao projeto Aloy",
     category: "DevLog",
     description: "DevLog #01 da Aloy – uma assistente pessoal local, privada e modular. Neste post explico por que decidi criar minha própria IA, o que já está funcionando, e como pretendo abrir o projeto como open source futuramente.",
@@ -148,6 +152,7 @@ Esse DevLog é escrito de Dev (e um toque de IA para agilizar a vida ksks) para 
   },
   {
     id: "devlog01-pipeline-observability-jan-2026",
+    date: "06 Jan 2026",
     title: "DevLog #01 – Order Pipeline: Arquitetura Event-Driven Serverless",
     category: "DevLog",
     description: "Iniciando o DEVLOG sobre observabilidade e resiliência em arquiteturas event-driven serverless com C#/.NET. Discutindo a estrutura geral do projeto Order Pipeline.",
@@ -189,6 +194,7 @@ Esse DevLog é escrito de Dev (e um toque de IA para agilizar a vida ksks) para 
   },
   {
     id: "devlog02-pipeline-observability-instrumentation",
+    date: "13 Jan 2026",
     title: "DevLog #02 – Instrumentando Observabilidade: Traces, Logs e Métricas",
     category: "DevLog",
     description: "Explorando os três pilares da observabilidade: traces distribuídos, logs estruturados e métricas. Implementação prática com Application Insights e Jaeger.",
@@ -248,6 +254,7 @@ var orderCounter = meter.CreateCounter&lt;long&gt;(
   },
   {
     id: "devlog03-pipeline-resilience-patterns",
+    date: "20 Jan 2026",
     title: "DevLog #03 – Padrões de Resiliência: Retry, Circuit Breaker e Bulkhead",
     category: "DevLog",
     description: "Implementando padrões avançados de resiliência no Order Pipeline. Exploramos Retry com exponential backoff, Circuit Breaker patterns e Bulkhead isolation.",
@@ -321,6 +328,7 @@ var policyWrap = Policy.WrapAsync(
   },
   {
     id: "devlog04-pipeline-testing-validation",
+    date: "27 Jan 2026",
     title: "DevLog #04 – Testing e Validação: Garantindo Confiabilidade",
     category: "DevLog",
     description: "Finalizando o DEVLOG com estratégias de testes end-to-end, unit tests, integration tests e chaos engineering para garantir a confiabilidade do Order Pipeline.",
