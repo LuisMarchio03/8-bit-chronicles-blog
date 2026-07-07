@@ -1,19 +1,23 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import { posts } from "../../data/posts"
 import { notFound } from "next/navigation"
+import { getPostsByCategory } from "@/lib/posts"
+import { CATEGORIES } from "@/lib/categories"
 import PostCard from "../../components/PostCard"
 
-const CATEGORIES = ["games", "tech", "devlog"]
-
 export function generateStaticParams() {
-  return CATEGORIES.map((slug) => ({ slug }))
+  return CATEGORIES.map(({ slug }) => ({ slug }))
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const category = slug.charAt(0).toUpperCase() + slug.slice(1)
-  const categoryPosts = posts.filter((post) => post.category.toLowerCase() === slug)
+  const category = CATEGORIES.find((c) => c.slug === slug)
+
+  if (!category) {
+    notFound()
+  }
+
+  const categoryPosts = getPostsByCategory(category.label)
 
   if (categoryPosts.length === 0) {
     notFound()
@@ -27,7 +31,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       >
         <ArrowLeft className="w-4 h-4" /> Voltar
       </Link>
-      <h2 className="text-xl sm:text-2xl font-pixel mb-8">Posts · {category}</h2>
+      <h2 className="text-xl sm:text-2xl font-pixel mb-8">Posts · {category.label}</h2>
       <div className="grid gap-5 sm:grid-cols-2">
         {categoryPosts.map((post) => (
           <PostCard key={post.id} post={post} />

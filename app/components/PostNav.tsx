@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { ArrowLeft, ArrowRight } from "lucide-react"
-import type { Post } from "@/app/data/posts"
+import type { Post } from "@/lib/posts"
 
 export default function PostNav({ prev, next }: { prev?: Post; next?: Post }) {
   return (

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Gamepad2, Monitor, Terminal, Calendar, Clock } from "lucide-react"
-import type { Post } from "@/app/data/posts"
+import type { Post } from "@/lib/posts"
+import { formatDate } from "@/lib/posts"
 import { readingTime } from "@/lib/post-utils"
 
 type CatMeta = { Icon: typeof Monitor; grad: string }
@@ -39,7 +40,7 @@ export default function PostCard({ post }: { post: Post }) {
         </p>
         <div className="flex items-center gap-4 font-mono text-base text-purple-400/70">
           <span className="flex items-center gap-1">
-            <Calendar className="w-4 h-4" /> {post.date}
+            <Calendar className="w-4 h-4" /> {formatDate(post.date)}
           </span>
           <span className="flex items-center gap-1">
             <Clock className="w-4 h-4" /> {minutes} min
