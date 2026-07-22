@@ -1,17 +1,17 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog10-aloy-ux-mobile",
-  title: "DevLog #10 – Aloy: UX mobile — nav inferior, safe-area e painel único",
+  id: "devlog21-aloy-ux-mobile-nav-inferior",
+  title: "DevLog #21 – Aloy: UX mobile — nav inferior, safe-area e painel único",
   category: "DevLog",
   description:
-    "DevLog #10 da Aloy. Alcançar a Aloy pelo celular era o #09; usá-la é outra história. Barra de navegação inferior, safe-area do notch, cockpit em painel único — e um post em que boa parte da entrega foi descobrir o que NÃO precisava ser feito.",
+    "DevLog #21 da Aloy. Alcançar a Aloy pelo celular era o #20; usá-la é outra história. Barra de navegação inferior, safe-area do notch, cockpit em painel único — e um post em que boa parte da entrega foi descobrir o que NÃO precisava ser feito.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-20",
   tags: ["mobile", "ux", "responsivo", "nextjs", "frontend"],
   coverImage: "./coverimg-aloy-10.jpg",
   series: "aloy",
-  content: `<p>O DevLog #09 fechou o problema de <strong>alcançar</strong> a Aloy de qualquer lugar: VPN, versão web, QR code. Só que alcançar e <em>usar</em> são coisas diferentes. Abri a UI no celular e ela era, honestamente, uma tela de desktop encolhida. Este devlog é sobre fechar a linha "versão web / celular" pelo lado da experiência no aparelho.</p>
+  content: `<p>O DevLog #20 fechou o problema de <strong>alcançar</strong> a Aloy de qualquer lugar: VPN, versão web, QR code. Só que alcançar e <em>usar</em> são coisas diferentes. Abri a UI no celular e ela era, honestamente, uma tela de desktop encolhida. Este devlog é sobre fechar a linha "versão web / celular" pelo lado da experiência no aparelho.</p>
 <p>Escopo: <strong>só frontend</strong>, reusando a base responsiva que já existia (o drawer e o <code>useIsMobile</code>). Nenhuma linha de backend.</p>
 <hr>
 <h3>A nav que cabe no polegar</h3>

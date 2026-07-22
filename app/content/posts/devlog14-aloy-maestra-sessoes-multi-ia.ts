@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog08-aloy-sessoes-multi-ia",
-  title: "DevLog #08 – Aloy: Maestra — orquestrando sessões multi-IA (Claude + opencode)",
+  id: "devlog14-aloy-maestra-sessoes-multi-ia",
+  title: "DevLog #14 – Aloy: Maestra — orquestrando sessões multi-IA (Claude + opencode)",
   category: "DevLog",
   description:
-    "DevLog #08 da Aloy. A funcionalidade mais ambiciosa até agora: a Aloy vira superfície de controle de agentes de código autônomos — Claude e opencode — com cockpit ao vivo, suporte a múltiplas plataformas e até rodando a IA em outro PC pela rede.",
+    "DevLog #14 da Aloy. A funcionalidade mais ambiciosa até agora: a Aloy vira superfície de controle de agentes de código autônomos — Claude e opencode — com cockpit ao vivo, suporte a múltiplas plataformas e até rodando a IA em outro PC pela rede.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-05",
   tags: ["claude", "opencode", "orquestracao", "agentes", "websocket"],

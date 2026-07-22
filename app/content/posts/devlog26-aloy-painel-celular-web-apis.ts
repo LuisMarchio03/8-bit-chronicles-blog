@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog25-aloy-painel-celular",
-  title: "DevLog #25 – Aloy: Painel de Sistema do celular",
+  id: "devlog26-aloy-painel-celular-web-apis",
+  title: "DevLog #26 – Aloy: Painel de Sistema do celular",
   category: "DevLog",
   description:
-    "DevLog #25 da Aloy. O celular deixa de ser uma janela pro PC e vira um dispositivo com métricas próprias. Web APIs de bateria, rede, memória e storage. E o CRITICAL: uma Web API que lança sincronamente e congela a navegação.",
+    "DevLog #26 da Aloy. O celular deixa de ser uma janela pro PC e vira um dispositivo com métricas próprias. Web APIs de bateria, rede, memória e storage. E o CRITICAL: uma Web API que lança sincronamente e congela a navegação.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-22",
   tags: ["mobile", "web-apis", "metricas", "bateria", "navegador"],

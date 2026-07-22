@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog16-aloy-smoke-proatividade-frontend",
-  title: "DevLog #16 – Aloy: Smoke da Proatividade + Verdade na UI + Versão Web",
+  id: "devlog11-aloy-smoke-proatividade-verdade-ui-web",
+  title: "DevLog #11 – Aloy: Smoke da Proatividade + Verdade na UI + Versão Web",
   category: "DevLog",
   description:
-    "DevLog #16 da Aloy. Primeiro smoke ao vivo de qualquer subprojeto (Proatividade, canal desktop = PASS). Depois: 'Verdade na UI' (nenhum pixel mente) e versão web + QR para acesso no celular.",
+    "DevLog #11 da Aloy. Primeiro smoke ao vivo de qualquer subprojeto (Proatividade, canal desktop = PASS). Depois: 'Verdade na UI' (nenhum pixel mente) e versão web + QR para acesso no celular.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-02",
   tags: ["smoke-test", "frontend", "ux", "web", "qr-code"],

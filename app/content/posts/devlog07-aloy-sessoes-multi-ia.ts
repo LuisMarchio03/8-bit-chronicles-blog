@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog13-aloy-sessoes-multi-ia",
-  title: "DevLog #13 – Aloy: Sessões multi-IA e orquestrador de sessões",
+  id: "devlog07-aloy-sessoes-multi-ia",
+  title: "DevLog #07 – Aloy: Sessões multi-IA e orquestrador de sessões",
   category: "DevLog",
   description:
-    "DevLog #13 da Aloy. O orquestrador de sessões que dirige Claude, opencode e RemoteWorker. Smoke ao vivo pegou 2 bugs reais + 1 pendência de infra. A Aloy deixa de ser single-IA e vira um hub de agentes.",
+    "DevLog #07 da Aloy. O orquestrador de sessões que dirige Claude, opencode e RemoteWorker. Smoke ao vivo pegou 2 bugs reais + 1 pendência de infra. A Aloy deixa de ser single-IA e vira um hub de agentes.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-06-29",
   tags: ["sessoes", "orquestrador", "claude", "opencode", "multi-ia"],

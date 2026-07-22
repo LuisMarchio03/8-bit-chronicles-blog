@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog21-aloy-wireguard",
-  title: "DevLog #21 – Aloy: WireGuard (leitura + up/down)",
+  id: "devlog18-aloy-wireguard",
+  title: "DevLog #18 – Aloy: WireGuard (leitura + up/down)",
   category: "DevLog",
   description:
-    "DevLog #21 da Aloy. Módulo WireGuard para a Aloy: leitura de status, subir/descer túneis, parser seguro de 'wg show all dump' com omissão de chaves privadas. Estratégia de sudo via sudoers NOPASSWD específico.",
+    "DevLog #18 da Aloy. Módulo WireGuard para a Aloy: leitura de status, subir/descer túneis, parser seguro de 'wg show all dump' com omissão de chaves privadas. Estratégia de sudo via sudoers NOPASSWD específico.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-17",
   tags: ["wireguard", "vpn", "sudo", "rede", "tunel"],

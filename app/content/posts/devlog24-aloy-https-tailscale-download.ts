@@ -1,7 +1,7 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog24-aloy-https-tailscale",
+  id: "devlog24-aloy-https-tailscale-download",
   title: "DevLog #24 – Aloy: HTTPS via Tailscale + download de arquivo no celular",
   category: "DevLog",
   description:

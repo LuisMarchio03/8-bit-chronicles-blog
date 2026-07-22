@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog09-aloy-rede-vpn-acesso-remoto",
-  title: "DevLog #09 – Aloy: Rede — VPN (Tailscale + WireGuard) e acesso remoto por QR",
+  id: "devlog20-aloy-rede-vpn-acesso-remoto",
+  title: "DevLog #20 – Aloy: Rede — VPN (Tailscale + WireGuard) e acesso remoto por QR",
   category: "DevLog",
   description:
-    "DevLog #09 da Aloy. O último desta leva: alcançar a Aloy de qualquer lugar, com segurança. Integração com Tailscale e WireGuard, versão web servida na LAN, autenticação por QR code com worker-token e acesso remoto pelo celular via tailnet.",
+    "DevLog #20 da Aloy. O último desta leva: alcançar a Aloy de qualquer lugar, com segurança. Integração com Tailscale e WireGuard, versão web servida na LAN, autenticação por QR code com worker-token e acesso remoto pelo celular via tailnet.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-19",
   tags: ["vpn", "tailscale", "wireguard", "seguranca", "qr", "acesso-remoto"],

@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog19-aloy-transferencia-arquivos",
-  title: "DevLog #19 – Aloy: Transferência de arquivos entre dispositivos",
+  id: "devlog16-aloy-transferencia-arquivos",
+  title: "DevLog #16 – Aloy: Transferência de arquivos entre dispositivos",
   category: "DevLog",
   description:
-    "DevLog #19 da Aloy. Envio de arquivos entre aloy-brains na LAN/VPN, reaproveitando a infra de sessões remotas. FT-1 (envio), FT-2 (browse/download remoto) e FT-3 (upload resumável em chunks com progresso).",
+    "DevLog #16 da Aloy. Envio de arquivos entre aloy-brains na LAN/VPN, reaproveitando a infra de sessões remotas. FT-1 (envio), FT-2 (browse/download remoto) e FT-3 (upload resumável em chunks com progresso).",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-10",
   tags: ["arquivos", "transferencia", "inbox", "upload", "chunks"],

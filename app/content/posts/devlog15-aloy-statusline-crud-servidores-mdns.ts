@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog18-aloy-statusline-servidores-mdns",
-  title: "DevLog #18 – Aloy: Statusline, CRUD de servidores e descoberta mDNS",
+  id: "devlog15-aloy-statusline-crud-servidores-mdns",
+  title: "DevLog #15 – Aloy: Statusline, CRUD de servidores e descoberta mDNS",
   category: "DevLog",
   description:
-    "DevLog #18 da Aloy. Statusline por sessão, CRUD de servidores em runtime pela UI, descoberta automática de servidores na LAN via mDNS, e barra agregada por servidor.",
+    "DevLog #15 da Aloy. Statusline por sessão, CRUD de servidores em runtime pela UI, descoberta automática de servidores na LAN via mDNS, e barra agregada por servidor.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-06",
   tags: ["statusline", "servidores", "mdns", "crud", "descoberta"],

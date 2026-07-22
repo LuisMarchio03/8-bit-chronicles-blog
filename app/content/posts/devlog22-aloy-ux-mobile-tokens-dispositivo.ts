@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog23-aloy-ux-mobile",
-  title: "DevLog #23 – Aloy: UX Mobile e Tokens por dispositivo",
+  id: "devlog22-aloy-ux-mobile-tokens-dispositivo",
+  title: "DevLog #22 – Aloy: UX Mobile e Tokens por dispositivo",
   category: "DevLog",
   description:
-    "DevLog #23 da Aloy. UX mobile polida: nav inferior, safe-area, split de navegação testável. E tokens por-dispositivo com revogação individual — cada aparelho tem seu próprio segredo.",
+    "DevLog #22 da Aloy. UX mobile polida: nav inferior, safe-area, split de navegação testável. E tokens por-dispositivo com revogação individual — cada aparelho tem seu próprio segredo.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-20",
   tags: ["mobile", "ux", "nav", "tokens", "dispositivos"],

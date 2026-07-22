@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog22-aloy-auth-qr",
-  title: "DevLog #22 – Aloy: Auth do celular via QR + acesso remoto Tailscale",
+  id: "devlog19-aloy-auth-celular-qr",
+  title: "DevLog #19 – Aloy: Auth do celular via QR + acesso remoto Tailscale",
   category: "DevLog",
   description:
-    "DevLog #22 da Aloy. Segurança na LAN: WorkerAuthMiddleware global, pareamento por QR com token único, e acesso remoto via Tailscale no QR. O celular agora autentica antes de falar com o backend.",
+    "DevLog #19 da Aloy. Segurança na LAN: WorkerAuthMiddleware global, pareamento por QR com token único, e acesso remoto via Tailscale no QR. O celular agora autentica antes de falar com o backend.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-18",
   tags: ["auth", "qr-code", "seguranca", "tailscale", "pareamento"],

@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog17-aloy-reconciliacao-opencode",
-  title: "DevLog #17 – Aloy: Reconciliação ao vivo do opencode + servidores remotos",
+  id: "devlog13-aloy-reconciliacao-opencode-servidores",
+  title: "DevLog #13 – Aloy: Reconciliação ao vivo do opencode + servidores remotos",
   category: "DevLog",
   description:
-    "DevLog #17 da Aloy. A API real do opencode era diferente da doc — 3 bugs corrigidos. Depois: servidores remotos (8e-1/8e-2) permitem rodar sessões em outros PCs da LAN. Tudo validado ao vivo.",
+    "DevLog #13 da Aloy. A API real do opencode era diferente da doc — 3 bugs corrigidos. Depois: servidores remotos (8e-1/8e-2) permitem rodar sessões em outros PCs da LAN. Tudo validado ao vivo.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-03",
   tags: ["opencode", "reconciliacao", "servidores", "remoto", "api"],

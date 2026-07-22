@@ -1,17 +1,17 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog11-aloy-tokens-dispositivo-https",
-  title: "DevLog #11 – Aloy: Um token por dispositivo, revogação e HTTPS via Tailscale",
+  id: "devlog23-aloy-tokens-dispositivo-https",
+  title: "DevLog #23 – Aloy: Um token por dispositivo, revogação e HTTPS via Tailscale",
   category: "DevLog",
   description:
-    "DevLog #11 da Aloy. Sai o token único compartilhado, entra um por dispositivo — revogável. Depois, TLS via tailscale serve. E a parte desconfortável: a recon derrubou duas hipóteses minhas, e 3 dos 4 bugs que os reviews pegaram eram do meu próprio plano.",
+    "DevLog #23 da Aloy. Sai o token único compartilhado, entra um por dispositivo — revogável. Depois, TLS via tailscale serve. E a parte desconfortável: a recon derrubou duas hipóteses minhas, e 3 dos 4 bugs que os reviews pegaram eram do meu próprio plano.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-21",
   tags: ["seguranca", "auth", "tailscale", "https", "tokens", "tls"],
   coverImage: "./coverimg-aloy-11.jpg",
   series: "aloy",
-  content: `<p>O DevLog #09 deixou a autenticação por QR funcionando: escaneia, o celular ganha um token, o backend para de aceitar qualquer aparelho da Wi-Fi. Funcionava — com uma limitação que eu sabia que ia me morder: era um <strong>token único compartilhado</strong>. Todos os dispositivos usavam o mesmo segredo. Ou seja: <em>perdi o celular → só dá pra trocar o segredo de todos</em>, e reparear tudo.</p>
+  content: `<p>O DevLog #20 deixou a autenticação por QR funcionando: escaneia, o celular ganha um token, o backend para de aceitar qualquer aparelho da Wi-Fi. Funcionava — com uma limitação que eu sabia que ia me morder: era um <strong>token único compartilhado</strong>. Todos os dispositivos usavam o mesmo segredo. Ou seja: <em>perdi o celular → só dá pra trocar o segredo de todos</em>, e reparear tudo.</p>
 <p>Este devlog fecha esse buraco e depois bota TLS na frente de tudo. É o dia mais denso desta leva — e o mais desconfortável de escrever, porque a maior parte dos bugs era minha.</p>
 <hr>
 <h3>Um token por dispositivo</h3>

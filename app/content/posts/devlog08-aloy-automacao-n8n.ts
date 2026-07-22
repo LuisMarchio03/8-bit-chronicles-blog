@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog14-aloy-automacao-n8n",
-  title: "DevLog #14 – Aloy: Automação N8N bidirecional",
+  id: "devlog08-aloy-automacao-n8n",
+  title: "DevLog #08 – Aloy: Automação N8N bidirecional",
   category: "DevLog",
   description:
-    "DevLog #14 da Aloy. A Aloy agora conversa com o N8N nos dois sentidos: dispara workflows por comando de voz/chat e recebe webhooks com deliver ou prompt. Ciclo completo de brainstorming a review final.",
+    "DevLog #08 da Aloy. A Aloy agora conversa com o N8N nos dois sentidos: dispara workflows por comando de voz/chat e recebe webhooks com deliver ou prompt. Ciclo completo de brainstorming a review final.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-06-30",
   tags: ["n8n", "automacao", "workflows", "webhook", "integracao"],

@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog20-aloy-vpn-tailscale",
-  title: "DevLog #20 – Aloy: VPN Tailscale (CLI + API + exit-node)",
+  id: "devlog17-aloy-vpn-tailscale",
+  title: "DevLog #17 – Aloy: VPN Tailscale (CLI + API + exit-node)",
   category: "DevLog",
   description:
-    "DevLog #20 da Aloy. Integração com Tailscale: CLI local (status/up/down), REST API do tailnet (lista de dispositivos), e controle de exit-node. Tudo pela UI, com confirmação para ações consequentes.",
+    "DevLog #17 da Aloy. Integração com Tailscale: CLI local (status/up/down), REST API do tailnet (lista de dispositivos), e controle de exit-node. Tudo pela UI, com confirmação para ações consequentes.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-14",
   tags: ["vpn", "tailscale", "rede", "exit-node", "tailnet"],

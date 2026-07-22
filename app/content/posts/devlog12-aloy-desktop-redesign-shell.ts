@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog26-aloy-desktop-redesign",
-  title: "DevLog #26 – Aloy: Redesign do shell do desktop",
+  id: "devlog12-aloy-desktop-redesign-shell",
+  title: "DevLog #12 – Aloy: Redesign do shell do desktop",
   category: "DevLog",
   description:
-    "DevLog #26 da Aloy. Shell full-bleed sem bordas, sidebar colapsável com drawer off-canvas no mobile, navegação por seções extraídas, e código caindo de 1188 para 7 linhas no page.tsx.",
+    "DevLog #12 da Aloy. Shell full-bleed sem bordas, sidebar colapsável com drawer off-canvas no mobile, navegação por seções extraídas, e código caindo de 1188 para 7 linhas no page.tsx.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-02",
   tags: ["desktop", "redesign", "shell", "sidebar", "frontend"],

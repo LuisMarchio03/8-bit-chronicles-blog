@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog07-aloy-proatividade-n8n",
-  title: "DevLog #07 – Aloy: Proatividade e automação — lembretes, wake word e n8n",
+  id: "devlog09-aloy-proatividade-n8n",
+  title: "DevLog #09 – Aloy: Proatividade e automação — lembretes, wake word e n8n",
   category: "DevLog",
   description:
-    "DevLog #07 da Aloy. Até aqui ela só agia quando eu chamava. Neste post ela vira proativa: agenda e dispara lembretes sozinha (em 3 canais), acorda com 'Hey Aloy' e conversa nos dois sentidos com o n8n pra disparar e receber automações.",
+    "DevLog #09 da Aloy. Até aqui ela só agia quando eu chamava. Neste post ela vira proativa: agenda e dispara lembretes sozinha (em 3 canais), acorda com 'Hey Aloy' e conversa nos dois sentidos com o n8n pra disparar e receber automações.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-01",
   tags: ["proatividade", "agendamento", "wake-word", "n8n", "automacao"],

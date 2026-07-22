@@ -1,11 +1,11 @@
 import type { Post } from "@/lib/posts"
 
 export const post: Post = {
-  id: "devlog15-aloy-proatividade",
-  title: "DevLog #15 – Aloy: Proatividade, agendamento e wake word",
+  id: "devlog10-aloy-proatividade-agendamento-wake-word",
+  title: "DevLog #10 – Aloy: Proatividade, agendamento e wake word",
   category: "DevLog",
   description:
-    "DevLog #15 da Aloy. A Aloy aprende a tomar iniciativa: agendamento tz-aware, disparo em 3 canais (desktop, Discord, voz), wake word 'Hey Aloy', e os fixes de timeout de chat e captura de áudio.",
+    "DevLog #10 da Aloy. A Aloy aprende a tomar iniciativa: agendamento tz-aware, disparo em 3 canais (desktop, Discord, voz), wake word 'Hey Aloy', e os fixes de timeout de chat e captura de áudio.",
   author: "Luís Gabriel Marchió Batista",
   date: "2026-07-01",
   tags: ["proatividade", "agendamento", "wake-word", "voz", "stt-tts"],
