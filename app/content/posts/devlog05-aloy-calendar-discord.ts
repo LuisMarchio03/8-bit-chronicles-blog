@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-06-26",
   tags: ["google-calendar", "discord", "bot", "oauth", "tool-calling"],
   coverImage: "./coverimg-aloy-05.jpg",
+  series: "aloy",
   content: `<p>Até aqui a Aloy vivia dentro da máquina. Neste DevLog ela ganha o mundo em dois sentidos: passa a mexer na minha <strong>agenda real</strong> e vira um <strong>bot de Discord</strong> que eu falo de longe. E, como manda o figurino, as abas CALENDAR e DISCORD do front eram… você já sabe, fake.</p>
 <hr>
 <h3>Calendário de verdade (Google Calendar)</h3>

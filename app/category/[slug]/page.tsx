@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
-import { getPostsByCategory } from "@/lib/posts"
+import { getSeriesGroups } from "@/lib/posts"
 import { CATEGORIES } from "@/lib/categories"
 import PostCard from "../../components/PostCard"
 
@@ -17,11 +17,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     notFound()
   }
 
-  const categoryPosts = getPostsByCategory(category.label)
+  const groups = getSeriesGroups(category.label)
 
-  if (categoryPosts.length === 0) {
+  if (groups.length === 0) {
     notFound()
   }
+
+  // Categoria sem séries (um grupo só) mostra o grid direto — sem um cabeçalho inútil.
+  const showHeadings = groups.length > 1
 
   return (
     <div>
@@ -32,11 +35,18 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         <ArrowLeft className="w-4 h-4" /> Voltar
       </Link>
       <h2 className="text-xl sm:text-2xl font-pixel mb-8">Posts · {category.label}</h2>
-      <div className="grid gap-5 sm:grid-cols-2">
-        {categoryPosts.map((post) => (
-          <PostCard key={post.id} post={post} />
-        ))}
-      </div>
+      {groups.map((group) => (
+        <section key={group.slug ?? "ungrouped"} className={showHeadings ? "mb-10" : undefined}>
+          {showHeadings && (
+            <h3 className="text-lg sm:text-xl font-pixel mb-5 text-purple-400">{group.label}</h3>
+          )}
+          <div className="grid gap-5 sm:grid-cols-2">
+            {group.posts.map((post) => (
+              <PostCard key={post.id} post={post} />
+            ))}
+          </div>
+        </section>
+      ))}
     </div>
   )
 }

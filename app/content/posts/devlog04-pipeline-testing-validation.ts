@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-01-27",
   tags: ["testes", "xunit", "testcontainers", "k6", "chaos-engineering"],
   coverImage: "./coverimg-order-pipeline-04.jpg",
+  series: "pipeline",
   content: `<h3>Uma Arquitetura Robusta Precisa de Testes Robustos</h3>
 <p>Observabilidade e resiliência são fundamentais, mas precisamos <strong>validar que tudo funciona</strong> antes de ir para produção.</p>
 <h3>1. Unit Tests para Lógica de Negócio</h3>

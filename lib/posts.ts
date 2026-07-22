@@ -1,8 +1,11 @@
 import { format, isValid, parseISO } from "date-fns"
 import { ptBR } from "date-fns/locale"
 import { posts } from "@/app/content/posts"
+import { SERIES, UNGROUPED_LABEL } from "@/lib/series"
 
 export type Category = "Games" | "Tech" | "DevLog"
+
+export type SeriesSlug = "aloy" | "pipeline" | "brigid"
 
 export type Post = {
   id: string
@@ -13,6 +16,7 @@ export type Post = {
   date: string // ISO "YYYY-MM-DD"
   tags: string[]
   coverImage?: string
+  series?: SeriesSlug // ausente = post avulso → "Aleatórios"
   content: string // HTML cru
 }
 
@@ -29,6 +33,28 @@ export function getPostById(id: string): Post | undefined {
 
 export function getPostsByCategory(category: Category): Post[] {
   return sorted.filter((p) => p.category === category)
+}
+
+export type SeriesGroup = { label: string; slug: SeriesSlug | null; posts: Post[] }
+
+// Grupos na ordem de SERIES; os posts sem série vêm sempre por último, em "Aleatórios".
+// Grupos vazios são omitidos. A ordem dentro de cada grupo é a global (data desc).
+export function getSeriesGroups(category: Category): SeriesGroup[] {
+  const inCategory = getPostsByCategory(category)
+
+  const groups: SeriesGroup[] = SERIES.map(({ label, slug }) => ({
+    label,
+    slug,
+    posts: inCategory.filter((p) => p.series === slug),
+  }))
+
+  groups.push({
+    label: UNGROUPED_LABEL,
+    slug: null,
+    posts: inCategory.filter((p) => !p.series),
+  })
+
+  return groups.filter((g) => g.posts.length > 0)
 }
 
 export function getAdjacentPosts(id: string): { prev?: Post; next?: Post } {

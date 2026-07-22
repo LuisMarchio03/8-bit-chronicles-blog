@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-06-26",
   tags: ["memoria", "embeddings", "sqlite", "rag", "ollama"],
   coverImage: "./coverimg-aloy-06.jpg",
+  series: "aloy",
   content: `<p>Essa é a parte que faz a Aloy deixar de ser "um chat esperto" e começar a ser <strong>uma assistente que me conhece</strong>.</p>
 <p>Até este ponto, a memória dela era só RAM: um histórico de sessão que <strong>sumia no restart</strong>, e cada sessão era uma ilha isolada. Se eu dissesse "prefiro reunião de manhã" numa conversa, na seguinte ela não fazia ideia. Neste DevLog isso muda.</p>
 <hr>

@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-06-25",
   tags: ["ia", "agente", "ollama", "fastapi", "golang", "tool-calling"],
   coverImage: "./coverimg-aloy-02.jpg",
+  series: "aloy",
   content: `<p>Fala pessoal! Faz um tempão desde o DevLog #01, né?</p>
 <p>A Aloy não morreu — pelo contrário. Ela passou por uma <strong>reescrita completa</strong>. Neste post eu conto por que joguei fora boa parte da arquitetura antiga e o que ela virou: um kernel enxuto, local e modular, com um agente de verdade no centro.</p>
 <hr>

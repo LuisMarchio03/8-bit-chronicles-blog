@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-01-20",
   tags: ["resiliência", "polly", "circuit-breaker", "dotnet"],
   coverImage: "./coverimg-order-pipeline-03.jpg",
+  series: "pipeline",
   content: `<h3>Por que Resiliência é Crítica</h3>
 <p>Em uma arquitetura serverless event-driven, falhas são inevitáveis. A chave é <strong>recuperar-se rapidamente</strong>.</p>
 <h3>1. Retry com Exponential Backoff</h3>

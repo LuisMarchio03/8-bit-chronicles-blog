@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2025-04-23",
   tags: ["ia", "assistente", "electron", "microservices", "open-source"],
   coverImage: "./coverimg-01.jpg",
+  series: "aloy",
   content: `<p>Fala pessoal, tudo certo?</p>
 <p>Gostaria de compartilhar com vocês um projeto pessoal que tenho desenvolvido nos últimos meses… e que tem me deixado bem empolgado.</p>
 <p>Cerca de dois meses atrás, comecei a pensar em como poderia organizar melhor minha vida, automatizar minhas anotações, rotinas diárias, lembretes, enfim...</p>

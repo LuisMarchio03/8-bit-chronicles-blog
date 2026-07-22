@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-06-25",
   tags: ["golang", "hardware", "metricas", "dashboard", "websocket"],
   coverImage: "./coverimg-aloy-04.jpg",
+  series: "aloy",
   content: `<p>Seguindo a saga de "matar os dados falsos da UI": o painel de sistema da Aloy mostrava gráficos bonitos de CPU e memória… que eram fake. Neste DevLog ele passa a mostrar o que a máquina <strong>realmente</strong> está fazendo, em tempo real.</p>
 <hr>
 <h3>Go pro trabalho pesado</h3>

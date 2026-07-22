@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-01-13",
   tags: ["observabilidade", "opentelemetry", "jaeger", "serilog", "prometheus"],
   coverImage: "./coverimg-order-pipeline-02.jpg",
+  series: "pipeline",
   content: `<h3>Os Três Pilares da Observabilidade</h3>
 <p>Observabilidade é mais do que monitoramento. Está baseada em <strong>três pilares fundamentais</strong>:</p>
 <ol>

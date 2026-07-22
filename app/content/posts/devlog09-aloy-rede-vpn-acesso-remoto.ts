@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-07-19",
   tags: ["vpn", "tailscale", "wireguard", "seguranca", "qr", "acesso-remoto"],
   coverImage: "./coverimg-aloy-09.jpg",
+  series: "aloy",
   content: `<p>Se a Aloy já comanda IAs em outros PCs e me atende no celular, faltava fechar a última peça: <strong>alcançar tudo isso de qualquer lugar, com segurança.</strong> Este é o último DevLog desta leva, e ele é sobre rede.</p>
 <hr>
 <h3>VPN: Tailscale e WireGuard</h3>

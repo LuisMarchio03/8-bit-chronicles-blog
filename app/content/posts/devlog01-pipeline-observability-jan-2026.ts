@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-01-06",
   tags: ["dotnet", "event-driven", "serverless", "observabilidade"],
   coverImage: "./coverimg-order-pipeline-01.jpg",
+  series: "pipeline",
   content: `<h3>Introdução</h3>
 <p>Após criar o repositório completo para o projeto <strong>Order Pipeline</strong>, estou iniciando um DEVLOG detalhado sobre <strong>observabilidade e resiliência em arquiteturas event-driven serverless com C#/.NET</strong>.</p>
 <p>Neste primeiro post, vamos explorar:</p>

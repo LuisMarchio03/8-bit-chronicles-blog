@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-07-05",
   tags: ["claude", "opencode", "orquestracao", "agentes", "websocket"],
   coverImage: "./coverimg-aloy-08.jpg",
+  series: "aloy",
   content: `<p>Esse é o DevLog da funcionalidade mais ambiciosa do projeto até agora. A Aloy deixa de ser <em>a IA</em> e passa a ser a <strong>maestra</strong>: uma superfície de controle pra dirigir <strong>outras</strong> IAs — agentes de código autônomos que trabalham num diretório por conta própria.</p>
 <hr>
 <h3>Dois planos de modelo (não confunda)</h3>

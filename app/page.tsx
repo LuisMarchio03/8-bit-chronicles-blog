@@ -3,6 +3,8 @@ import { getPostsByCategory } from "@/lib/posts"
 import { CATEGORIES } from "@/lib/categories"
 import PostCard from "./components/PostCard"
 
+const HOME_POSTS_PER_CATEGORY = 4
+
 export default function Home() {
   return (
     <div>
@@ -10,12 +12,13 @@ export default function Home() {
       {CATEGORIES.map(({ label, slug }) => {
         const categoryPosts = getPostsByCategory(label)
         if (categoryPosts.length === 0) return null
+        const recentPosts = categoryPosts.slice(0, HOME_POSTS_PER_CATEGORY)
 
         return (
           <section key={slug} className="mb-12">
             <h3 className="text-lg sm:text-xl font-pixel mb-5">{label}</h3>
             <div className="grid gap-5 sm:grid-cols-2">
-              {categoryPosts.map((post) => (
+              {recentPosts.map((post) => (
                 <PostCard key={post.id} post={post} />
               ))}
             </div>

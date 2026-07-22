@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-07-01",
   tags: ["proatividade", "agendamento", "wake-word", "n8n", "automacao"],
   coverImage: "./coverimg-aloy-07.jpg",
+  series: "aloy",
   content: `<p>Toda a Aloy que construí até aqui é <strong>reativa</strong>: ela espera eu falar. Neste DevLog ela ganha iniciativa — passa a me procurar sozinha, a acordar só pela voz, e a conversar com o n8n pra puxar e empurrar automações.</p>
 <hr>
 <h3>O motor de agendamento</h3>

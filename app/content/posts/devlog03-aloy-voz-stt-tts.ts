@@ -10,6 +10,7 @@ export const post: Post = {
   date: "2026-06-25",
   tags: ["voz", "stt", "tts", "whisper", "piper", "local-first"],
   coverImage: "./coverimg-aloy-03.jpg",
+  series: "aloy",
   content: `<p>No frontend em Electron, a Aloy já "falava" — mas era teatro. A animação de voz era 100% simulada; não tinha nada de áudio real por trás. Hora de resolver isso.</p>
 <p>Neste DevLog a Aloy ganha <strong>ouvido e boca de verdade</strong>, e — fiel ao projeto — tudo local: nenhum byte de áudio trafega pela rede.</p>
 <hr>

@@ -10,6 +10,24 @@ import { post as devlogAloy06 } from "./devlog06-aloy-memoria-longo-prazo"
 import { post as devlogAloy07 } from "./devlog07-aloy-proatividade-n8n"
 import { post as devlogAloy08 } from "./devlog08-aloy-sessoes-multi-ia"
 import { post as devlogAloy09 } from "./devlog09-aloy-rede-vpn-acesso-remoto"
+import { post as devlogAloy10 } from "./devlog10-aloy-ux-mobile"
+import { post as devlogAloy11 } from "./devlog11-aloy-tokens-dispositivo-https"
+import { post as devlogAloy12 } from "./devlog12-aloy-painel-sistema-celular"
+import { post as devlogAloy13 } from "./devlog13-aloy-sessoes-multi-ia"
+import { post as devlogAloy14 } from "./devlog14-aloy-automacao-n8n"
+import { post as devlogAloy15 } from "./devlog15-aloy-proatividade"
+import { post as devlogAloy16 } from "./devlog16-aloy-smoke-proatividade-frontend"
+import { post as devlogAloy17 } from "./devlog17-aloy-reconciliacao-opencode"
+import { post as devlogAloy18 } from "./devlog18-aloy-statusline-servidores-mdns"
+import { post as devlogAloy19 } from "./devlog19-aloy-transferencia-arquivos"
+import { post as devlogAloy20 } from "./devlog20-aloy-vpn-tailscale"
+import { post as devlogAloy21 } from "./devlog21-aloy-wireguard"
+import { post as devlogAloy22 } from "./devlog22-aloy-auth-qr"
+import { post as devlogAloy23 } from "./devlog23-aloy-ux-mobile"
+import { post as devlogAloy24 } from "./devlog24-aloy-https-tailscale"
+import { post as devlogAloy25 } from "./devlog25-aloy-painel-celular"
+import { post as devlogAloy26 } from "./devlog26-aloy-desktop-redesign"
+import { post as devlogBrigid01 } from "./devlog01-brigid-voltando-ao-tcc"
 import { post as devlog01Pipeline } from "./devlog01-pipeline-observability-jan-2026"
 import { post as devlog02Pipeline } from "./devlog02-pipeline-observability-instrumentation"
 import { post as devlog03Pipeline } from "./devlog03-pipeline-resilience-patterns"
@@ -19,6 +37,23 @@ export const posts: Post[] = [
   microservices,
   clairObscur,
   // Série DevLog da Aloy — ordem reversa por marco (resolve empates de mesma data no sort)
+  devlogAloy26,
+  devlogAloy25,
+  devlogAloy24,
+  devlogAloy23,
+  devlogAloy22,
+  devlogAloy21,
+  devlogAloy20,
+  devlogAloy19,
+  devlogAloy18,
+  devlogAloy17,
+  devlogAloy16,
+  devlogAloy15,
+  devlogAloy14,
+  devlogAloy13,
+  devlogAloy12,
+  devlogAloy11,
+  devlogAloy10,
   devlogAloy09,
   devlogAloy08,
   devlogAloy07,
@@ -28,6 +63,8 @@ export const posts: Post[] = [
   devlogAloy03,
   devlogAloy02,
   devlogAloy,
+  // Série BrigidAI
+  devlogBrigid01,
   devlog01Pipeline,
   devlog02Pipeline,
   devlog03Pipeline,
